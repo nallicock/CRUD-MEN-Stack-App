@@ -11,7 +11,9 @@
     <h1>Dr. <%= doctor.name %></h1>
     <h3><%= doctor.title %></h3>
     <h1>Patients</h1>
-    <a href="/doctors/<%= doctor._id %>/patients/new">ADD PATIENT</a>
+    <a href="/doctors/<%= doctor._id %>/patients/new"
+      ><button>ADD PATIENT</button></a
+    >
     <% if(patient.length) { %>
     <table>
       <thead>
