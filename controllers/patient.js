@@ -20,4 +20,14 @@ function create(req, res) {
   res.redirect(`/doctors/${req.params.id}`);
 }
 
-module.exports = { create, new: newPatient };
+function patientList(req, res) {
+  Patient.find({}, function (err, patients) {
+    if (err) {
+      res.send(err.message);
+    } else {
+      res.render("patient/patients", { patients });
+    }
+  });
+}
+
+module.exports = { create, new: newPatient, patientList };
