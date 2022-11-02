@@ -35,10 +35,12 @@
       <thead>
         <tr>
           <th>Patient Notes</th>
+          <th>Note Created At</th>
         </tr>
         <% patient.notes.forEach(function(n) { %>
         <tr>
           <td><%= n.note %></td>
+          <td><%= n.createdAt %></td>
         </tr>
         <% }) %>
       </thead>

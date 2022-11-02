@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const notesSchema = new Schema({
-  note: String,
-});
+const notesSchema = new Schema(
+  {
+    note: String,
+  },
+  { timestamps: true }
+);
 
 const patientSchema = new Schema({
   name: String,
