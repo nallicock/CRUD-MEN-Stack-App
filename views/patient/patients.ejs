@@ -20,11 +20,10 @@
         </tr>
         <% patients.forEach(function(p) { %>
         <tr>
-          <td>p.name</td>
-          <td>p.age</td>
-          <td>p.sickness</td>
-          <td>p.room</td>
-          <td>p.doctor</td>
+          <td><%= p.name %></td>
+          <td><%= p.age %></td>
+          <td><%= p.sickness %></td>
+          <td><%= p.room %></td>
         </tr>
         <% }) %>
       </thead>
