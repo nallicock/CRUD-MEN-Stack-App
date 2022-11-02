@@ -44,7 +44,7 @@ async function updatePatientInfo(req, res) {
 
 async function updatePatient(req, res) {
   await Patient.findByIdAndUpdate(req.params.id, req.body).then(
-    res.redirect("/patients")
+    res.redirect(`/patients/update/${req.params.id}`)
   );
 }
 
