@@ -22,15 +22,17 @@
           <td><%= d.name %></td>
           <td><%= d.title %></td>
           <td>
-            <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
-              <button type="submit">DELETE</button>
-            </form>
-          </td>
-          <td>
             <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
           </td>
           <td>
-            <a href="/doctors/update/<%= d._id %>">Update Doctor</a>
+            <a href="/doctors/update/<%= d._id %>"
+              ><button>Update Doctor</button></a
+            >
+          </td>
+          <td>
+            <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
+              <button type="submit">DELETE</button>
+            </form>
           </td>
         </tr>
         <% }) %>

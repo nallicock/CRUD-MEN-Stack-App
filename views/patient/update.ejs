@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("../../partials/header.ejs") %>
+    <h1>Update Patient Form</h1>
+    <h3>Modify patient: <%= patient.name %></h3>
+    <form
+      action="/patients/update/<%= patient._id %>?_method=PUT"
+      method="POST"
+    >
+      <label>Name: </label>
+      <input type="text" name="name" value="<%= patient.name %>" />
+      <label>Age: </label>
+      <input type="number" name="age" value="<%= patient.age %>" />
+      <label>Sickness: </label>
+      <input type="text" name="sickness" value="<%= patient.sickness %>" />
+      <label>Room: </label>
+      <input type="number" name="room" value="<%= patient.room %>" />
+      <button type="submit">Save Patient</button>
+    </form>
+  </body>
+</html>

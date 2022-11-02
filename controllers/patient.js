@@ -36,9 +36,23 @@ async function deletePatient(req, res) {
   );
 }
 
+async function updatePatientInfo(req, res) {
+  const patient = await Patient.findById(req.params.id);
+  console.log(patient);
+  res.render("patient/update", { patient });
+}
+
+async function updatePatient(req, res) {
+  await Patient.findByIdAndUpdate(req.params.id, req.body).then(
+    res.redirect("/patients")
+  );
+}
+
 module.exports = {
   create,
   new: newPatient,
   patientList,
   delete: deletePatient,
+  update: updatePatient,
+  updatePatientInfo,
 };
