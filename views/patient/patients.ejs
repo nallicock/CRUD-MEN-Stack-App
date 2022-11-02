@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Patients:</h1>
+    <% if(patients.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Sickness</th>
+          <th>Room</th>
+          <th>Doctor</th>
+        </tr>
+        <% patients.forEach(function(p) { %>
+        <tr>
+          <td>p.name</td>
+          <td>p.age</td>
+          <td>p.sickness</td>
+          <td>p.room</td>
+          <td>p.doctor</td>
+        </tr>
+        <% }) %>
+      </thead>
+    </table>
+    <% } else { %>
+    <h3>No Patients</h3>
+    <% } %>
+  </body>
+</html>
