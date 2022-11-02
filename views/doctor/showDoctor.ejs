@@ -11,6 +11,7 @@
     <h3><%= doctor.title %></h3>
     <h1>Patients</h1>
     <a href="/doctors/<%= doctor._id %>/patients/new">ADD PATIENT</a>
+    <% if(patient.length) { %>
     <table>
       <thead>
         <tr>
@@ -21,5 +22,8 @@
         </tr>
       </thead>
     </table>
+    <% } else { %>
+    <h3>No Patients</h3>
+    <% } %>
   </body>
 </html>
