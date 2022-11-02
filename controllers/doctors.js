@@ -17,8 +17,10 @@ function docList(req, res) {
 
 function show(req, res) {
   Doctor.findById(req.params.id, function (err, doctor) {
-    res.render("doctor/showDoctor", { doctor });
-    console.log(doctor);
+    Patient.find({ doctor: doctor._id }, function (err, patient) {
+      console.log(patient);
+      res.render("doctor/showDoctor", { doctor, patient });
+    });
   });
 }
 
