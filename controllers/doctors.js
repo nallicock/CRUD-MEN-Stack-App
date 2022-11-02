@@ -15,6 +15,12 @@ function docList(req, res) {
   });
 }
 
+function show(req, res) {
+  Doctor.findById(req.params.id, function (err, doctor) {
+    res.render("doctor/showDoctor", doctor);
+  });
+}
+
 function create(req, res) {
   console.log(req.body);
   const doctor = new Doctor(req.body);
@@ -29,4 +35,4 @@ function create(req, res) {
   });
 }
 
-module.exports = { docList, new: newDoctor, create };
+module.exports = { docList, new: newDoctor, create, show };
