@@ -10,9 +10,9 @@
     <h1>Update Doctor</h1>
     <form action="/doctors/update/<%= doctor._id %>?_method=PUT" method="POST">
       <label for="name">Doctor Name:</label>
-        <input type="text" name="name" value = "<%=doctor.name %>"/>
+        <input type="text" name="name" value = "<%=doctor.name %>" required/>
         <label for="title">Doctor Title:</label>
-        <select name="title" value = "<%= doctor.title %>">
+        <select name="title" required>
           <option value="Surgeon">Surgeon</option>
           <option value="Optometrist">Optometrist</option>
           <option value="Psychiatrist">Psychiatrist</option>
