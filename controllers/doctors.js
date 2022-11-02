@@ -39,8 +39,7 @@ function create(req, res) {
 }
 
 async function deleteDoctor(req, res) {
-  await Doctor.findByIdAndDelete(id).then(res.redirect("/doctors"));
-  console.log(result);
+  await Doctor.findByIdAndDelete(req.params.id).then(res.redirect("/doctors"));
 }
 
 module.exports = {

@@ -21,7 +21,7 @@
           <td><%= d.name %></td>
           <td><%= d.title %></td>
           <td>
-            <form action="/doctors/<%= d._id %>" method="DELETE">
+            <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
               <button type="submit">DELETE</button>
             </form>
           </td>
