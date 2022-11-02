@@ -30,4 +30,15 @@ function patientList(req, res) {
   });
 }
 
-module.exports = { create, new: newPatient, patientList };
+async function deletePatient(req, res) {
+  await Patient.findByIdAndDelete(req.params.id).then(
+    res.redirect("/patients")
+  );
+}
+
+module.exports = {
+  create,
+  new: newPatient,
+  patientList,
+  delete: deletePatient,
+};

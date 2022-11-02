@@ -16,7 +16,6 @@
           <th>Age</th>
           <th>Sickness</th>
           <th>Room</th>
-          <th>Doctor</th>
         </tr>
         <% patients.forEach(function(p) { %>
         <tr>
@@ -24,6 +23,11 @@
           <td><%= p.age %></td>
           <td><%= p.sickness %></td>
           <td><%= p.room %></td>
+          <td>
+            <form action="/patients/<%= p._id %>/?_method=DELETE" method="POST">
+              <button type="submit">Delete Patient</button>
+            </form>
+          </td>
         </tr>
         <% }) %>
       </thead>
