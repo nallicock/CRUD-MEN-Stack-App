@@ -34,13 +34,11 @@
     <table>
       <thead>
         <tr>
-          <th>Patient Name</th>
           <th>Patient Notes</th>
         </tr>
         <% patient.notes.forEach(function(n) { %>
         <tr>
-          <td>d.patientName</td>
-          <td>d.note</td>
+          <td><%= n.note %></td>
         </tr>
         <% }) %>
       </thead>
