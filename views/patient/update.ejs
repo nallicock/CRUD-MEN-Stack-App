@@ -27,5 +27,24 @@
     <form action="/patients/<%= patient._id %>/?_method=DELETE" method="POST">
       <button type="submit">Delete Patient</button>
     </form>
+    <h1>Notes:</h1>
+    <% if(!patient.notes.length) { %>
+    <h3>No notes</h3>
+    <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Patient Notes</th>
+        </tr>
+        <% patient.notes.forEach(function(n) { %>
+        <tr>
+          <td>d.patientName</td>
+          <td>d.note</td>
+        </tr>
+        <% }) %>
+      </thead>
+    </table>
+    <% } %>
   </body>
 </html>
