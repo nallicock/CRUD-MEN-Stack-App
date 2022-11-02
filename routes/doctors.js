@@ -7,5 +7,6 @@ router.get("/", doctorsCtrl.docList);
 router.get("/new", doctorsCtrl.new);
 router.get("/:id", doctorsCtrl.show);
 router.post("/", doctorsCtrl.create);
+router.delete("/:id", doctorsCtrl.delete);
 
 module.exports = router;

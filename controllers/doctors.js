@@ -38,4 +38,15 @@ function create(req, res) {
   });
 }
 
-module.exports = { docList, new: newDoctor, create, show };
+async function deleteDoctor(req, res) {
+  await Doctor.findByIdAndDelete(id).then(res.redirect("/doctors"));
+  console.log(result);
+}
+
+module.exports = {
+  docList,
+  new: newDoctor,
+  create,
+  show,
+  delete: deleteDoctor,
+};
