@@ -28,6 +28,9 @@
           <td>
             <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
           </td>
+          <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE</button>
+          </form>
         </tr>
         <% }) %>
       </thead>

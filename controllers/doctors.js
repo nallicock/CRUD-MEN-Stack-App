@@ -42,10 +42,15 @@ async function deleteDoctor(req, res) {
   await Doctor.findByIdAndDelete(req.params.id).then(res.redirect("/doctors"));
 }
 
+async function updateDoctor(req, res) {
+  await Doctor.findByIdAndUpdate(req.params.id).then(res.redirect("/doctors"));
+}
+
 module.exports = {
   docList,
   new: newDoctor,
   create,
   show,
   delete: deleteDoctor,
+  update: updateDoctor,
 };
