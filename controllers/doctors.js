@@ -42,8 +42,16 @@ async function deleteDoctor(req, res) {
   await Doctor.findByIdAndDelete(req.params.id).then(res.redirect("/doctors"));
 }
 
+async function updateDocInfo(req, res) {
+  const doctor = await Doctor.findById(req.params.id);
+  console.log(doctor);
+  res.render("doctor/update", { doctor });
+}
+
 async function updateDoctor(req, res) {
-  await Doctor.findByIdAndUpdate(req.params.id).then(res.redirect("/doctors"));
+  await Doctor.findByIdAndUpdate(req.params.id, req.body).then(
+    res.redirect("/doctors")
+  );
 }
 
 module.exports = {
@@ -53,4 +61,5 @@ module.exports = {
   show,
   delete: deleteDoctor,
   update: updateDoctor,
+  updateDocInfo,
 };

@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <%- include("../../partials/header.ejs") %>
     <h1>Doctor LIST</h1>
     <a href="/doctors/new"><button>Add Doctor</button></a>
     <% if(doctors.length) { %>
@@ -28,9 +29,9 @@
           <td>
             <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
           </td>
-          <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
-            <button type="submit">DELETE</button>
-          </form>
+          <td>
+            <a href="/doctors/update/<%= d._id %>">Update Doctor</a>
+          </td>
         </tr>
         <% }) %>
       </thead>

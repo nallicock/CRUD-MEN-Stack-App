@@ -7,10 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>New Doctor</h1>
-    <form action="/doctors" method="POST">
+    <h1>Update Doctor</h1>
+    <form action="/doctors/update?_method=PUT" method="POST">
       <label for="name">Doctor Name:</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" value = "<%=doctor.name %>"/>
         <label for="title">Doctor Title:</label>
         <select name="title">
           <option value="Surgeon">Surgeon</option>
@@ -19,7 +19,7 @@
           <option value="Endocronologist">Endocronologist</option>
           <option value="Pediatrician">Pediatrician</option>
         </select>
-        <button type="submit">Save Doctor</button>
+        <button type="submit">Update Doctor</button>
       </label>
     </form>
   </body>

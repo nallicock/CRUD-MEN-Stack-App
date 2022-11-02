@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <%- include("../../partials/header.ejs") %>
     <h1>New Patient Form</h1>
     <h3>Add a new patient for Dr. <%= doctor.name %></h3>
     <form action="/doctors/<%= doctor._id %>/patients" method="POST">
