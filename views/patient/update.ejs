@@ -9,7 +9,7 @@
   <body>
     <%- include("../../partials/header.ejs") %>
     <h1>Update Patient Form</h1>
-    <h3>Modify patient: <%= patient.name %></h3>
+    <h3>View Patient: <%= patient.name %></h3>
     <form
       action="/patients/update/<%= patient._id %>?_method=PUT"
       method="POST"
@@ -23,6 +23,9 @@
       <label>Room: </label>
       <input type="number" name="room" value="<%= patient.room %>" />
       <button type="submit">Save Patient</button>
+    </form>
+    <form action="/patients/<%= patient._id %>/?_method=DELETE" method="POST">
+      <button type="submit">Delete Patient</button>
     </form>
   </body>
 </html>

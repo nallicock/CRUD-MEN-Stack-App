@@ -27,6 +27,11 @@
           <td><%= p.age %></td>
           <td><%= p.sickness %></td>
           <td><%= p.room %></td>
+          <td>
+            <a href="/patients/update/<%= p._id %>"
+              ><button>View Patient</button></a
+            >
+          </td>
         </tr>
         <% }) %>
       </thead>
