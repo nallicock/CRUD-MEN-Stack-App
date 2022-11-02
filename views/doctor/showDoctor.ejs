@@ -20,6 +20,14 @@
           <th>Sickness</th>
           <th>Room</th>
         </tr>
+        <% patient.forEach(function(p) { %>
+        <tr>
+          <td><%= p.name %></td>
+          <td><%= p.age %></td>
+          <td><%= p.sickness %></td>
+          <td><%= p.room %></td>
+        </tr>
+        <% }) %>
       </thead>
     </table>
     <% } else { %>
