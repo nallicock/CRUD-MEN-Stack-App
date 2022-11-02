@@ -15,4 +15,18 @@ function docList(req, res) {
   });
 }
 
-module.exports = { docList, new: newDoctor };
+function create(req, res) {
+  console.log(req.body);
+  const doctor = new Doctor(req.body);
+  console.log(doctor);
+
+  doctor.save(function (err, doc) {
+    if (err) {
+      res.send("THERE WAS AN ERROR SAVING!");
+    } else {
+      res.redirect("/doctors");
+    }
+  });
+}
+
+module.exports = { docList, new: newDoctor, create };
