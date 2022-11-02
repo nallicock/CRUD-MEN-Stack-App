@@ -15,24 +15,4 @@ function docList(req, res) {
   });
 }
 
-function show(req, res) {
-  Doctor.findById(req.params.id, function (err, doctor) {
-    res.render("doctor/showDoctor", doctor);
-  });
-}
-
-function create(req, res) {
-  console.log(req.body);
-  const doctor = new Doctor(req.body);
-  console.log(doctor);
-
-  doctor.save(function (err, doc) {
-    if (err) {
-      res.send("THERE WAS AN ERROR SAVING!");
-    } else {
-      res.redirect("/doctors");
-    }
-  });
-}
-
-module.exports = { docList, new: newDoctor, create, show };
+module.exports = { docList, new: newDoctor };
