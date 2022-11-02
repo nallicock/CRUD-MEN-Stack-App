@@ -7,6 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>SHOW DOC</h1>
+    <h1>Dr. <%= doctor.name %></h1>
+    <h3><%= doctor.title %></h3>
+    <h1>Patients</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Age</th>
+          <th>Sickness</th>
+          <th>Room</th>
+        </tr>
+      </thead>
+    </table>
+    <a href="/doctors/<%= doctor._id %>/patients/new">ADD PATIENT</a>
   </body>
 </html>

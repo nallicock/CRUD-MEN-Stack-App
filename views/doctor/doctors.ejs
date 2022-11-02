@@ -9,6 +9,7 @@
   <body>
     <h1>Doctor LIST</h1>
     <a href="/doctors/new"><button>Add Doctor</button></a>
+    <% if(doctors.length) { %>
     <table>
       <thead>
         <tr>
@@ -26,5 +27,8 @@
         <% }) %>
       </thead>
     </table>
+    <% } else { %>
+    <h3>No Doctors Yet</h3>
+    <% } %>
   </body>
 </html>

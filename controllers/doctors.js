@@ -1,5 +1,5 @@
 const Doctor = require("../models/doctor");
-const DocNotes = require("../models/docNotes");
+const Patient = require("../models/patient");
 
 function newDoctor(req, res) {
   res.render("doctor/new");
@@ -17,7 +17,8 @@ function docList(req, res) {
 
 function show(req, res) {
   Doctor.findById(req.params.id, function (err, doctor) {
-    res.render("doctor/showDoctor", doctor);
+    res.render("doctor/showDoctor", { doctor });
+    console.log(doctor);
   });
 }
 
