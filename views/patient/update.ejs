@@ -47,9 +47,11 @@
     </table>
     <% } %>
     <h2>Add Patient Note</h2>
-    <form action="/patients/<%= patient._id %>/notes" method="POST">
-      <label>Patient Name: </label>
-      <input type="text" name="patientName" />
+    <form
+      id="add-note-form"
+      action="/patients/<%= patient._id %>/notes"
+      method="POST"
+    >
       <br />
       <label>Note:</label>
       <textarea name="note"></textarea>

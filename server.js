@@ -9,6 +9,7 @@ require("./config/database");
 var indexRouter = require("./routes/index");
 var doctorsRouter = require("./routes/doctors");
 var patientsRouter = require("./routes/patient");
+var notesRouter = require("./routes/notes");
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(methodOverride("_method"));
 app.use("/", indexRouter);
 app.use("/doctors", doctorsRouter);
 app.use("/", patientsRouter);
+app.use("/", notesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
