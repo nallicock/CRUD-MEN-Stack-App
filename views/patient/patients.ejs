@@ -25,6 +25,11 @@
             <td><%= p.age %></td>
             <td><%= p.sickness %></td>
             <td><%= p.room %></td>
+            <td id="update">
+              <a href="/patients/update/<%= p._id %>"
+                ><button id="update">View Patient</button></a
+              >
+            </td>
             <td id="delete">
               <form
                 action="/patients/<%= p._id %>/?_method=DELETE"
@@ -32,11 +37,6 @@
               >
                 <button type="submit" id="delete">Delete Patient</button>
               </form>
-            </td>
-            <td id="update">
-              <a href="/patients/update/<%= p._id %>"
-                ><button id="update">View Patient</button></a
-              >
             </td>
           </tr>
           <% }) %>
