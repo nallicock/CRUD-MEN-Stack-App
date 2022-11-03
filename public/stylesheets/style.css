@@ -2,28 +2,66 @@ body {
   padding: 50px;
   font-family: "Roboto", sans-serif;
   background-color: #cccccc;
-  width: 80%;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
+}
+nav {
+  margin: 0;
+  background-color: red;
+  width: 100%;
 }
 
 a {
   color: #00b7ff;
 }
+
 table {
   text-align: center;
+  display: flex;
 }
 
 th {
   background-color: #23408e;
+  padding: 5px;
 }
 
 td {
   background-color: #385399;
   border-radius: 5px;
+  padding: 5px;
 }
 
 button {
+  transition: 0.3s;
   border: none;
-  border-radius: 5px;
+  background-color: #385399;
+  padding: 5px;
+}
+
+button:hover {
+  transition: 0.3s;
+  background-color: #23408e;
+  cursor: pointer;
+}
+
+#update {
+  background-color: #ffbe4f;
+  transition: 0.3s;
+}
+
+#update:hover {
+  background-color: #00b7ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#delete {
+  background-color: red;
+  transition: 0.3s;
+}
+
+#delete:hover {
+  background-color: rgb(170, 3, 3);
+  transition: 0.3s;
+  cursor: pointer;
 }

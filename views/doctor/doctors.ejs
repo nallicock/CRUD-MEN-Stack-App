@@ -5,39 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/lists" />
   </head>
   <body>
     <%- include("../../partials/header.ejs") %>
     <h1>List Of Doctors</h1>
     <a href="/doctors/new"><button>Add Doctor</button></a>
     <% if(doctors.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Doctor Name</th>
-          <th>Doctor Title</th>
-        </tr>
-        <% doctors.forEach(function(d) { %>
-        <tr>
-          <td><%= d.name %></td>
-          <td><%= d.title %></td>
-          <td>
-            <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
-          </td>
-          <td>
-            <a href="/doctors/update/<%= d._id %>"
-              ><button>Update Doctor</button></a
-            >
-          </td>
-          <td>
-            <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
-              <button type="submit">DELETE</button>
-            </form>
-          </td>
-        </tr>
-        <% }) %>
-      </thead>
-    </table>
+    <div class="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Doctor Name</th>
+            <th>Doctor Title</th>
+          </tr>
+          <% doctors.forEach(function(d) { %>
+          <tr>
+            <td><%= d.name %></td>
+            <td><%= d.title %></td>
+            <td>
+              <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
+            </td>
+            <td id="update">
+              <a href="/doctors/update/<%= d._id %>"
+                ><button id="update">Update Doctor</button></a
+              >
+            </td>
+            <td id="delete">
+              <form action="/doctors/<%= d._id %>?_method=DELETE" method="POST">
+                <button type="submit" id="delete">DELETE</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </thead>
+      </table>
+    </div>
     <% } else { %>
     <h3>No Doctors Yet</h3>
     <% } %>
