@@ -1,8 +1,29 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #cccccc;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+table {
+  text-align: center;
+}
+
+th {
+  background-color: #23408e;
+}
+
+td {
+  background-color: #385399;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
 }
