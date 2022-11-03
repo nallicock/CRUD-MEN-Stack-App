@@ -1,14 +1,29 @@
 body {
-  padding: 50px;
   font-family: "Roboto", sans-serif;
   background-color: #cccccc;
   margin: 0;
   text-align: center;
 }
 nav {
-  margin: 0;
-  background-color: red;
+  background-color: #23408e;
+  height: 60px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  padding: 16px;
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #385399;
+}
+
+nav a:hover {
+  background-color: #385399;
+  transition: 0.3s;
 }
 
 a {
@@ -64,4 +79,9 @@ button:hover {
   background-color: rgb(170, 3, 3);
   transition: 0.3s;
   cursor: pointer;
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
 }
