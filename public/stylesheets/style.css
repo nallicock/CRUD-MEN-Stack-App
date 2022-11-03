@@ -70,6 +70,16 @@ button:hover {
   cursor: pointer;
 }
 
+#details {
+  background-color: #5982e7;
+  transition: 0.3s;
+}
+
+#details:hover {
+  background-color: #23408e;
+  transition: 0.3s;
+}
+
 #delete {
   background-color: red;
   transition: 0.3s;
@@ -84,4 +94,10 @@ button:hover {
 .tableContainer {
   display: flex;
   justify-content: center;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }

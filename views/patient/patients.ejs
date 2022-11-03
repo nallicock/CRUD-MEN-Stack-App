@@ -10,34 +10,39 @@
     <%- include("../../partials/header.ejs") %>
     <h1>List Of Patients:</h1>
     <% if(patients.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Sickness</th>
-          <th>Room</th>
-        </tr>
-        <% patients.forEach(function(p) { %>
-        <tr>
-          <td><%= p.name %></td>
-          <td><%= p.age %></td>
-          <td><%= p.sickness %></td>
-          <td><%= p.room %></td>
-          <td>
-            <form action="/patients/<%= p._id %>/?_method=DELETE" method="POST">
-              <button type="submit">Delete Patient</button>
-            </form>
-          </td>
-          <td>
-            <a href="/patients/update/<%= p._id %>"
-              ><button>View Patient</button></a
-            >
-          </td>
-        </tr>
-        <% }) %>
-      </thead>
-    </table>
+    <div class="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sickness</th>
+            <th>Room</th>
+          </tr>
+          <% patients.forEach(function(p) { %>
+          <tr>
+            <td><%= p.name %></td>
+            <td><%= p.age %></td>
+            <td><%= p.sickness %></td>
+            <td><%= p.room %></td>
+            <td id="delete">
+              <form
+                action="/patients/<%= p._id %>/?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit" id="delete">Delete Patient</button>
+              </form>
+            </td>
+            <td id="update">
+              <a href="/patients/update/<%= p._id %>"
+                ><button id="update">View Patient</button></a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </thead>
+      </table>
+    </div>
     <% } else { %>
     <h3>No Patients</h3>
     <% } %>

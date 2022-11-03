@@ -23,8 +23,10 @@
           <tr>
             <td><%= d.name %></td>
             <td><%= d.title %></td>
-            <td>
-              <a href="/doctors/<%=d._id%>"><button>Show Details</button></a>
+            <td id="details">
+              <a href="/doctors/<%=d._id%>"
+                ><button id="details">Show Details</button></a
+              >
             </td>
             <td id="update">
               <a href="/doctors/update/<%= d._id %>"
