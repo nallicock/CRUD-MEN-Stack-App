@@ -15,29 +15,31 @@
       ><button>ADD PATIENT</button></a
     >
     <% if(patient.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Patient Name:</th>
-          <th>Age:</th>
-          <th>Sickness:</th>
-          <th>Room:</th>
-        </tr>
-        <% patient.forEach(function(p) { %>
-        <tr>
-          <td><%= p.name %></td>
-          <td><%= p.age %></td>
-          <td><%= p.sickness %></td>
-          <td><%= p.room %></td>
-          <td>
-            <a href="/patients/update/<%= p._id %>"
-              ><button>View Patient</button></a
-            >
-          </td>
-        </tr>
-        <% }) %>
-      </thead>
-    </table>
+    <div class="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Patient Name:</th>
+            <th>Age:</th>
+            <th>Sickness:</th>
+            <th>Room:</th>
+          </tr>
+          <% patient.forEach(function(p) { %>
+          <tr>
+            <td><%= p.name %></td>
+            <td><%= p.age %></td>
+            <td><%= p.sickness %></td>
+            <td><%= p.room %></td>
+            <td id="update">
+              <a href="/patients/update/<%= p._id %>"
+                ><button id="update">View Patient</button></a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </thead>
+      </table>
+    </div>
     <% } else { %>
     <h3>No Patients</h3>
     <% } %>
