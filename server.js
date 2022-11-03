@@ -10,7 +10,7 @@ var indexRouter = require("./routes/index");
 var doctorsRouter = require("./routes/doctors");
 var patientsRouter = require("./routes/patient");
 var notesRouter = require("./routes/notes");
-var port = process.env.port || 3000;
+var port = process.env.port || 4000;
 
 var app = express();
 
