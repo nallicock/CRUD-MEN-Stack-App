@@ -1,5 +1,5 @@
 <h1>Bean Clinic Management System</h1>
-(Created using EJS, JavaScript, NodeJs, HTML/CSS, Express)
+(Created using EJS, JavaScript, NodeJs, HTML/CSS, Express, MongoDB, Mongoose, Heroku)
 <br/><br/>
 
 This system allows the user to create doctors and patients. The user is also allowed to modify doctors/patients, view their details, and add patient notes.
