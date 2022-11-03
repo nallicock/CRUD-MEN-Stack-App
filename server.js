@@ -10,6 +10,7 @@ var indexRouter = require("./routes/index");
 var doctorsRouter = require("./routes/doctors");
 var patientsRouter = require("./routes/patient");
 var notesRouter = require("./routes/notes");
+var port = process.env.port || 3000;
 
 var app = express();
 
@@ -45,8 +46,8 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-app.listen(3000, function () {
-  console.log("Server listening on port 3000");
+app.listen(port, function () {
+  console.log(`Server listening on port ${port}`);
 });
 
 module.exports = app;
