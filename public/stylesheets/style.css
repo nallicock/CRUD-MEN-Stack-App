@@ -92,6 +92,11 @@ button:hover {
   cursor: pointer;
 }
 
+.introP {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .tableContainer {
   display: flex;
   justify-content: center;
