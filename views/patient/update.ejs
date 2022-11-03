@@ -31,20 +31,22 @@
     <% if(!patient.notes.length) { %>
     <h3>No notes</h3>
     <% } else { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Patient Notes</th>
-          <th>Note Created At</th>
-        </tr>
-        <% patient.notes.forEach(function(n) { %>
-        <tr>
-          <td><%= n.note %></td>
-          <td><%= n.createdAt %></td>
-        </tr>
-        <% }) %>
-      </thead>
-    </table>
+    <div class="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Patient Notes</th>
+            <th>Note Created At</th>
+          </tr>
+          <% patient.notes.forEach(function(n) { %>
+          <tr>
+            <td><%= n.note %></td>
+            <td><%= n.createdAt %></td>
+          </tr>
+          <% }) %>
+        </thead>
+      </table>
+    </div>
     <% } %>
     <h2>Add Patient Note</h2>
     <form
